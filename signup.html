@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký tài khoản</title>
+    <link rel="stylesheet" href="./style/loginsignup.css" />
+    <!-- font roboto -->
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+          <div class="logo"><a href="index.html"><img src="./image/logo.png" alt=""></a></div>
+          <ul class="links">
+              <li><a href="index.html">Trang chủ</a></li>
+              <li><a href="donam.html">Đồ Nam</a></li>
+              <li><a href="donu.html">Đồ Nữ</a></li>
+              <li><a href="treem.html"> Trẻ Em</a></li>
+          </ul>
+         
+          <div class="toggle-btn">
+              <div class="dropdown">
+                  <div class="nut_dropdown"> <i class="fa-solid fa-bars"></i></div>
+                   <div class="noidung_dropdown">
+                     <li><a href="index.html">Trang Chủ</a></li>
+                     <li><a href="donam.html">Đồ Nam</a></li>
+                     <li><a href="donu.html">Đồ Nữ</a></li>
+                     <li><a href="treem.html">Trẻ em</a></li>
+                     
+                   </div>
+                 </div>
+          </div>
+      </div>
+  </header>
+    <!-- form signup -->
+    <div class="signup">
+      <div class="signup__container">
+        <h1>Đăng Ký</h1>
+        <form action="">
+          <h5>Tên Tài Khoản</h5>
+          <input type="text" class="input-signup-username" />
+          <h5>Mật Khẩu</h5>
+          <input type="password" class="input-signup-password" />
+          <button type="submit" class="signup__signInButton">Đăng Ký</button>
+        </form>
+        <a href="./login.html" class="signup__registerButton">Đã có tài khoản?</a>
+      </div>
+    </div>
+  </body>
+  <script src="./js/signup.js"></script>
+</html>

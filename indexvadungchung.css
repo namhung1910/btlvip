@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    height: 100vh;
+    background-color: #000;
+    background-image: url('https://img.freepik.com/free-vector/white-background-gradient-modern-abstract-design-wave_343694-2337.jpg?w=2000');
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+li {
+    list-style: none;
+}
+
+a {/*chỉnh màu các thành phần navbar*/
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+a:hover {/*chỉnh màu các thành phần của navbar khi di chuột vào*/
+    color:red;
+}
+/*HEADER*/
+header {
+    position: relative;
+    padding: 0 2rem;
+    background-color: #fff;
+    box-shadow: 0px 1px 9px 0px #565656;
+}
+
+.navbar{/* chỉnh độ dài chiều rộng,chiều cao trong navbar*/
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {/*chỉnh cỡ chữ,độ đậm nhạt của logo*/
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {/*chỉnh khoảng cách các thành phần trong navbar*/
+    display: flex;
+    gap: 2rem;
+    
+}
+
+.navbar .toggle_btn{
+    color:black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: red;
+    color:black;
+    padding: 0.5rem 1rem ;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color:#fff;
+    
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+
+
+/*dropdown menu*/
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width:300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*làm giao diện header cho điện thọai*/
+@media(max-width:992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+/* Nút Dropdown*/
+.nut_dropdown {
+    background-color:none;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+}
+/* Thiết lập vị trí cho thẻ div với class dropdown*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Nội dung Dropdown */
+.noidung_dropdown {
+    /*Ẩn nội dung các đường dẫn*/
+    display: none;
+    position: absolute;
+    background-color: #7395AE;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px;
+    text-align: center;
+}
+/* Thiết kế style cho các đường dẫn trong Dropdown */
+.noidung_dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all .42s;
+}
+/* thay đổi màu background khi hover vào đường dẫn */
+.noidung_dropdown a:hover {
+    background-color: #557A95;
+    border-radius: 15px;
+    transform: scale(1.15);
+}
+/* hiển thị nội dung dropdown khi di chuột vào */
+.dropdown:hover .noidung_dropdown {display: block;}
+/* Thay đổi màu background cho nút khi được hover */
+.dropdown:hover .nut_dropdown {background-color: black;
+    color:#ddd;
+    transition: .4s;}
+/*KẾT THÚC HEADER*/
+
+
+/*MAin*/
+    section{
+        padding: 5% 10%;
+    }
+    .main-home{
+        width: 100%;
+        height: 100vh;
+        background-image: url("https://img.freepik.com/premium-vector/white-abstract-fluid-flow-background_646248-27.jpg?w=2000");
+        background-position: center;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+    }
+    .main-text a{
+        color: black;
+    }
+    .main-text h5{
+        color: #EE1C47;
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+.main-text h1{
+    color: #000;
+    font-size: 65px;
+    text-transform: capitalize;
+    line-height: 1.1;
+    font-weight: 600;
+    margin:6px 0 10px;
+}
+.main-text p{
+    color: #333c56;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.main-btn{
+    display: inline-block;
+    color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    padding: 12px 25px;
+    transition: all .42s ease;
+}
+.main-btn:hover{
+   background-color: #000;
+   color: #fff;
+}
+.main-btn i{
+    vertical-align: middle;
+}
+.down-arrow{
+    position: absolute;
+    top:85%;
+    right: 11%;
+}
+.down i{
+    font-size: 25px;
+    color: #2c2c2c;
+    border: 2px solid #2c2c2c;
+    border-radius: 100px;
+    padding: 12px 12px;
+}
+.down i:hover{
+    background-color: #2c2c2c;
+    color: #fff;
+    transition: all .42s ease;
+}
+header.sticky{
+    background: #fff;
+    padding: 20pc 10%;
+    box-shadow: 0px 0px 10px rgb( 0 0 0 / 10%);
+}
+/*trending-section-css*/
+.center-text h2{
+    color: #111;
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.center-text span{
+    color: #EE1C47;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px, auto));
+    gap: 2rem;
+}
+.row{
+    position: relative;
+    transition: all .40s;
+}
+.row img{
+    width: 100%;
+    height: auto;
+    transition: all .40s;
+    border-radius: 5px;
+}
+.row img:hover{
+    transform: scale(0.9);
+}
+.product-text h5{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #27b737;
+    padding:3px 10px;
+    border-radius: 2px;
+}
+.heart-icon{
+    position: absolute;
+    right: 0;
+    font-size:16px;
+
+}
+.heart-icon:hover{
+    color: #EE1C47;
+}
+.ratting i{
+    color: orange;
+    font-size: 18px;
+}
+.price h4{
+    color: #111;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.price p {
+    color: #151515;
+    font-size: 14px;
+    font-weight: 600;
+}
+/*review*/
+.client-reviews{
+    background-image: url("https://img.freepik.com/premium-vector/white-abstract-fluid-flow-background_646248-27.jpg?w=2000");
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.reviews{
+    text-align: center;
+}
+.reviews h3{
+    color: #111;
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 700;
+}
+.reviews img{
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+    margin: 10px 0;
+}
+.reviews p{
+    color: #707070;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+.reviews h2{
+    font-size: 22px;
+    color: #000;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 2px;
+}
+
+/* Update-section-css*/
+.up-center-text h2{
+    text-align: center;
+    color: #111;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.cart img{
+    width: 380px;
+    height: 295.55px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.update-cart{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(380px,auto));
+    gap: 1rem;
+}
+.cart h5{
+    color: #636872;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.cart h4{
+    color: #111;
+    font-size: 18px;
+    font-weight: 600;
+}
+.cart p {
+    color: #707070;
+    font-size: 15px;
+    max-width: 380px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+.cart h6{
+    color: #151515;
+    font-size: 14px;
+    font-weight: 500;
+}
+/*contact-section*/
+.contact{
+    background-color:#f3f4f6;
+
+}
+.contact a{
+    color: #565656;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+}
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,auto));
+    gap: 3rem;
+}
+.first-info img{
+    width: 140px;
+    height: auto;
+}
+.contact-info h4{
+    color: #212529;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.contact-info{
+    color: #565656;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+
+}
+.contact-info p:hover{
+    color:red;
+
+}
+.social-icon i{
+    color: #565656;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all .42s;
+}
+.social-icon i:hover{
+    transform: scale(1.3);
+}
+.end-text{
+    background-color: #edfff1;
+    text-align: center;
+    padding: 20px;
+}
+.end-text p{
+    color:#111;
+    text-transform: capitalize;
+}
+@media(max-width:890px){
+    header{
+        padding:20px 3%;
+        transition: .4s;
+    }
+}
+@media(max-width:630px){
+    .main-text h1{
+        font-size: 50px;
+        transition: .4s;
+    }
+    .main-text p{
+        font-size:18px;
+        transition: .4s;
+    }
+    .main-btn{
+        padding: 10px 20px;
+        transition: .4s;
+    }
+}

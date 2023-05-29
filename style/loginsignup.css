@@ -1,0 +1,340 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+/* style login */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://img.freepik.com/free-vector/white-background-gradient-modern-abstract-design-wave_343694-2337.jpg?w=2000');
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.login__container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login__container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+.login__container form {
+  display: flex;
+  flex-direction: column;
+}
+.login__container form label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.login__container form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.login__container form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: red;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.login__container form button:hover {
+  background: #557A95;
+}
+.login__container form a {
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+}
+.login__container form a:hover {
+  color: #555;
+}
+.login__registerButton {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+}
+/* style signup */
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://img.freepik.com/free-vector/white-background-gradient-modern-abstract-design-wave_343694-2337.jpg?w=2000');
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.signup__container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.signup__container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+.signup__container form {
+  display: flex;
+  flex-direction: column;
+}
+.signup__container form label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.signup__container form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.signup__container form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: red;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.signup__container form button:hover {
+  background: #555;
+}
+.signup__container form a {
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+}
+.signup__container form a:hover {
+  color: #555;
+}
+.signup__registerButton {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color:black;
+  display: block;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  background-color: #000;
+  background-image: url('https://img.freepik.com/free-vector/white-background-gradient-modern-abstract-design-wave_343694-2337.jpg?w=2000');
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+li {
+  list-style: none;
+}
+
+a {/*chỉnh màu các thành phần navbar*/
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+a:hover {/*chỉnh màu các thành phần của navbar khi di chuột vào*/
+  color:red;
+}
+/*HEADER*/
+header {
+  position: relative;
+  padding: 0 2rem;
+  background-color: #fff;
+  box-shadow: 0px 1px 9px 0px #565656;
+}
+
+.navbar{/* chỉnh độ dài chiều rộng,chiều cao trong navbar*/
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {/*chỉnh cỡ chữ,độ đậm nhạt của logo*/
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .links {/*chỉnh khoảng cách các thành phần trong navbar*/
+  display: flex;
+  gap: 2rem;
+  
+}
+
+.navbar .toggle_btn{
+  color:black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: red;
+  color:black;
+  padding: 0.5rem 1rem ;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color:#fff
+
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+
+
+/*dropdown menu*/
+.dropdown_menu{
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width:300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+  height: 240px;
+
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/*làm giao diện header cho điện thọai*/
+@media(max-width:992px) {
+  .navbar .links,
+  .navbar .action_btn {
+      display: none;
+  }
+
+  .navbar .toggle_btn {
+      display: block;
+  }
+
+  .dropdown_menu{
+      display: block;
+  }
+}
+/* Nút Dropdown*/
+.nut_dropdown {
+  background-color:none;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+}
+/* Thiết lập vị trí cho thẻ div với class dropdown*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Nội dung Dropdown */
+.noidung_dropdown {
+  /*Ẩn nội dung các đường dẫn*/
+  display: none;
+  position: absolute;
+  background-color: wheat;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Thiết kế style cho các đường dẫn trong Dropdown */
+.noidung_dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* thay đổi màu background khi hover vào đường dẫn */
+.noidung_dropdown a:hover {background-color: #ddd;}
+/* hiển thị nội dung dropdown khi hover */
+.dropdown:hover .noidung_dropdown {display: block;}
+/* Thay đổi màu background cho nút khi được hover */
+.dropdown:hover .nut_dropdown {background-color: black;
+  color:#ddd;
+transition: .4s;}
+/*KẾT THÚC HEADER*/
+
